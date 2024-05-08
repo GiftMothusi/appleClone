@@ -25,8 +25,12 @@ const Hero = () => {
   }, []);
 
   useGSAP(() => {
-    gsap.to(".hero-title", { opacity: 1, delay: 1.5 });
+    gsap.to(".hero-title", { opacity: 1, delay: 2 });
+
+    //button style
+    gsap.to("#cta", { y: -50, opacity: 1, delay: 2 });
   }, []);
+
   return (
     <section className="w-full nav-height bg-black relative">
       <div className="h-5/6 w-full flex-center flex-col">
@@ -42,6 +46,16 @@ const Hero = () => {
             <source src={videoSrc} type="video/mp4" />
           </video>
         </div>
+      </div>
+      {/**CALL TO ACTION */}
+      <div
+        id="cta"
+        className=" flex flex-col items-center opacity-0 translate-y-20"
+      >
+        <a href="#highlights" className="btn">
+          Buy
+        </a>
+        <p className="font-normal text-xl">from R789/month or R25000</p>
       </div>
     </section>
   );
