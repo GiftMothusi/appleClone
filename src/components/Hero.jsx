@@ -39,6 +39,7 @@ const Hero = () => {
           <video
             autoPlay
             muted
+            loop
             playsInline={true}
             key={videoSrc}
             className="pointer-events-none"
