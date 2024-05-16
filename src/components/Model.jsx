@@ -4,7 +4,6 @@ import gsap from "gsap";
 import ModelView from "./ModelView";
 import { useRef, useState } from "react";
 import { yellowImg } from "../utils";
-import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
@@ -101,6 +100,7 @@ const Model = () => {
                       backgroundColor: size === value ? "white" : "transparent",
                       color: size === value ? "black" : "white",
                     }}
+                    onClick={() => setSize(value)}
                   >
                     {label}
                   </span>
