@@ -49,7 +49,11 @@ const ModelView = ({
         position={[0, 0, 0]}
       >
         <Suspense fallback={<Loader />}>
-          <IPhone />
+          <IPhone
+            scale={index === 1 ? [15, 15, 15] : [17, 17, 17]}
+            item={item}
+            size={size}
+          />
         </Suspense>
       </group>
     </View>
